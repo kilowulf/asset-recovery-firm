@@ -2,34 +2,51 @@ import React, { useState } from "react";
 import ReactPlayer from "react-player";
 
 const videoUrls = [
-  "../img/clips/337855_House Neighborhood Trees Car_By_Erik_Nuenighoff_Artlist_HD.mp4",
-  "../img/clips/94466_Real estate agent putting a sticker that says sold on a for sale sign_By_Via_Films_Artlist_HD.mp4",
-  "../img/clips/693405_Legal Paperwork Contract Law Firm_By_Pressmaster_Artlist_HD.mp4"
+  "https://videos.pexels.com/video-files/7735852/7735852-hd_1920_1080_25fps.mp4",
+  "https://videos.pexels.com/video-files/8426052/8426052-uhd_3840_2160_25fps.mp4"
   // Add more video URLs as needed
 ];
 
 const Home = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
+  const handleVideoEnd = () => {
+    setCurrentVideoIndex(
+      prevIndex => (prevIndex === videoUrls.length - 1 ? 0 : prevIndex + 1)
+    );
+  };
+
   return (
-    <section id="home" className="min-h-screen bg-gray-100">
-      <div className="container mx-auto px-0 py-20">
-        <h2 className="text-4xl font-bold text-center mb-10">
-          Recover funds from foreclosures
-        </h2>
-        <div className="relative overflow-hidden h-80 bg-darker-maroon text-white">
+    <section id="home" className="min-h-screen bg-black">
+      <container className="container mx-auto px-0 py-20">
+        <div className="overflow-hidden">
           <ReactPlayer
             url={videoUrls[currentVideoIndex]}
             playing
             controls={false}
-            loop={true}
+            loop={false}
             muted
-            width="100vw" // extend width to full viewport width
+            width="100vw"
             height="100%"
-            style={{ marginLeft: "calc(-50vw + 50%)" }} // adjust margin to center the video
+            style={{
+              marginLeft: "calc(-50vw + 50%)",
+              filter: "brightness(0.5)"
+            } // extend width to full viewport width
+            }
+            onEnded={
+              handleVideoEnd // adjust margin to center the video
+            }
           />
+          <div className="content">
+            <h1 className="text-6xl font-bold">
+              Recover Overages from Foreclosed Properties
+            </h1>
+            <p className="text-base font-bold">
+              Let our professionals take care of your property recovery
+            </p>
+          </div>
         </div>
-      </div>
+      </container>
     </section>
   );
 };
