@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section id="about" className="min-h-screen bg-gray-200">
       <div className="container mx-auto px-4 py-20">
-        <h2 className="text-4xl font-bold text-center mb-10">About Us</h2>
+        <h2 className="text-4xl font-bold text-center mb-10">About Overage Recovery</h2>
         <p>
           Asset Recovery Firm specializes in recovering overages funds of
           residential properties that have fallen into foreclosure. We help

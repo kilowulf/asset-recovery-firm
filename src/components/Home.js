@@ -17,32 +17,40 @@ const Home = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen bg-black">
+    <section id="home">
       <container className="container mx-auto px-0 py-20">
-        <div className="overflow-hidden">
+        <div className="relative overflow-hidden">
           <ReactPlayer
             url={videoUrls[currentVideoIndex]}
             playing
             controls={false}
             loop={false}
             muted
-            width="100vw"
+            width="100vv"
             height="100%"
+            wrapper="container"
             style={{
-              marginLeft: "calc(-50vw + 50%)",
-              filter: "brightness(0.5)"
+              filter: "brightness(0.5)",
+              top: "0",
+              left: "0",
+              right: "0",
+              bottom: "0"
             } // extend width to full viewport width
             }
             onEnded={
               handleVideoEnd // adjust margin to center the video
             }
           />
-          <div className="content">
-            <h1 className="text-6xl font-bold">
+          <div className="content absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
+            <h1 className="text-center text-white text-8xl font-bold mb-5">
               Recover Overages from Foreclosed Properties
             </h1>
-            <p className="text-base font-bold">
+            <p className="text-center text-white text-base font-bold">
               Let our professionals take care of your property recovery
+            </p>
+            <p className="text-center text-white text-base">
+              Millions of dollars are recovered yearly by homeowners who might
+              have lost properties due to foreclosure proceedings
             </p>
           </div>
         </div>

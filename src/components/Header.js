@@ -1,19 +1,18 @@
 import React from "react";
-import { FaPhone } from "react-icons/fa6";
-import { BsLinkedin } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
 
 const Header = () => {
   return (
     <header className="bg-maroon text-white fixed top-0 left-0 right-0 z-10">
       <div className="container mx-auto flex justify-between items-center py-4">
-        <h1 className="text-2xl font-bold px-4">Asset Recovery Firm</h1>
-        <nav className="space-x-4">
-          <a href="#home" className="hover:text-gray-300">
-            Home
+        <h1 className="text-2xl font-bold px-2">
+          <a href="#home" className="hover:text-gray-300 pl-4">
+            Asset Recovery Firm
           </a>
+        </h1>
+
+        <nav className="flex-1 space-x-4 ml-8 pt-1">
           <a href="#about" className="hover:text-gray-300">
-            About Us
+            About
           </a>
           <a href="#services" className="hover:text-gray-300">
             Services
@@ -22,28 +21,6 @@ const Header = () => {
             Contact Us
           </a>
         </nav>
-        <div className="flex items-center">
-          <div className="flex items-center px-4">
-            <FaPhone />
-            <span className="px-4">(123) 456-7890</span>
-          </div>
-          <a
-            href="mailto:dob@assetrecovery.com"
-            className="flex items-center hover:text-gray-300 px-4"
-          >
-            <MdEmail />
-            <span className="px-4">dob@assetrecovery.com</span>
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center hover:text-gray-300 text-white px-4"
-          >
-            <BsLinkedin />
-            <span>LinkedIn</span>
-          </a>
-        </div>
       </div>
     </header>
   );
