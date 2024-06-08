@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 
 const Header = () => {
   return (
-    <header className="bg-maroon text-white fixed top-0 left-0 right-0 shadow-md z-10">
+    <header className="bg-maroon text-white fixed top-0 left-0 right-0 z-10">
       <div className="container mx-auto flex justify-between items-center py-4">
         <h1 className="text-2xl font-bold px-4">Asset Recovery Firm</h1>
         <nav className="space-x-4">
@@ -38,7 +38,7 @@ const Header = () => {
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center hover:text-gray-300 px-4"
+            className="flex items-center hover:text-gray-300 text-white px-4"
           >
             <BsLinkedin />
             <span>LinkedIn</span>
