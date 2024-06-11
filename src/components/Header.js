@@ -7,47 +7,23 @@ const Header = () => {
 
   const handleNav = () => {
     setNav(!nav);
-    if (!nav) {
-      showSidebar();
-    } else {
-      hideSidebar();
-    }
   };
-
-  function showSidebar() {
-    const sidebar = document.querySelector(".sidebar");
-    if (sidebar) {
-      sidebar.classList.add("show");
-    } else {
-      console.error("Sidebar element not found");
-    }
-  }
-
-  function hideSidebar() {
-    const sidebar = document.querySelector(".sidebar");
-    if (sidebar) {
-      sidebar.classList.remove("show");
-    } else {
-      console.error("Sidebar element not found");
-    }
-  }
 
   return (
     <header className="bg-maroon text-white fixed top-0 left-0 right-0 z-10 shadow-red-900">
       <div className="mx-auto flex justify-between items-center py-4">
         <h1 className="text-2xl font-bold">
-          <a href="#home" className="hover:text-gray-300 pl-4">
+          <a href="#home" className="text-white hover:text-gray-300 pl-4">
             Asset Recovery Firm
           </a>
         </h1>
         <div />
 
         <nav>
-          <ul className="sidebar uppercase">
-            <li onClick={hideSidebar} className="p-3 ml-2">
+          <ul className={`sidebar uppercase ${nav ? "show" : ""}`}>
+            <li onClick={handleNav} className="p-3 ml-2">
               <FaRegWindowClose size="19" />
             </li>
-
             <li>
               <a
                 href="#about"
@@ -74,7 +50,7 @@ const Header = () => {
             </li>
           </ul>
 
-          <ul className="uppercase">
+          <ul className="uppercase flex items-center">
             <li className="hideOnMobile">
               <a href="#about" className="hover:text-gray-300">
                 About
@@ -92,15 +68,11 @@ const Header = () => {
             </li>
             <li
               className="menuButton ease-in-out duration-300"
-              onClick={showSidebar}
+              onClick={handleNav}
             >
               {!nav
                 ? <LuMenuSquare className="menuButton mx-2" size="30" />
-                : <FaRegWindowClose
-                    size="30"
-                    className="menuButton"
-                    onClick={handleNav}
-                  />}
+                : <FaRegWindowClose size="30" className="menuButton" />}
             </li>
           </ul>
         </nav>

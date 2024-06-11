@@ -911,21 +911,21 @@ nav li:first-child {
 .sidebar {
   position: fixed;
   top: 0;
-  display: none;
-  right: 0;
+  right: -250px; /* Initially hidden off-screen */
   height: 100vh;
   width: 250px;
-  /* z-index: 999; */
+  z-index: 999;
   backdrop-filter: blur(10px);
-  background-color: rgba(91, 7, 7, 0.493) !important;
+  background-color: rgba(91, 7, 7, 0.493);
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out;
 }
 
 .sidebar.show {
-  display: flex;
+  right: 0; /* Slide-in */
 }
 
 .sidebar li {
@@ -936,7 +936,6 @@ nav li:first-child {
 .sidebar a {
   width: 100%;
 }
-
 .menuButton {
   display: none;
 }
