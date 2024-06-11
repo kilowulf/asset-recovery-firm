@@ -18,7 +18,7 @@ const Home = () => {
 
   return (
     <section id="home">
-      <container className="container mx-auto px-0 py-20">
+      <container className="container px-0 py-20">
         <div className="relative overflow-hidden">
           <ReactPlayer
             url={videoUrls[currentVideoIndex]}
@@ -34,7 +34,10 @@ const Home = () => {
               top: "0",
               left: "0",
               right: "0",
-              bottom: "0"
+              bottom: "0",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPosition: "center"
             } // extend width to full viewport width
             }
             onEnded={

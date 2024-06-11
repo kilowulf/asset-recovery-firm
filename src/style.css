@@ -430,7 +430,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 img,
 video {
   max-width: 100%;
-  height: auto;
+  height: fix-content;
 }
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
@@ -553,9 +553,26 @@ video {
   width: 100%;
 }
 
-@media (min-width: 640px) {
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 714px) {
   .container {
-    max-width: 640px;
+    max-width: 100%;
+  }
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menuButton {
+    display: block !important;
+  }
+
+  .content {
+    max-width: 768px;
   }
 }
 
@@ -853,4 +870,145 @@ code {
   align-items: center;
   color: white;
   padding-top: 100px;
+}
+
+.footerUl {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  align-items: center;
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  align-items: center;
+}
+
+nav li {
+  /* height: 50px; */
+}
+
+nav a {
+  display: flex;
+  height: 100%;
+  padding: 0 20px;
+  text-decoration: none;
+  align-items: center;
+}
+
+nav a:hover {
+  background-color: #4a1016;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  display: none;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  /* z-index: 999; */
+  backdrop-filter: blur(10px);
+  background-color: rgba(91, 7, 7, 0.493) !important;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.show {
+  display: flex;
+}
+
+.sidebar li {
+  width: 100%;
+  padding-top: 6px;
+}
+
+.sidebar a {
+  width: 100%;
+}
+
+.menuButton {
+  display: none;
+}
+
+/* Base styles for the content */
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  padding-top: 100px;
+}
+
+.content h1 {
+  font-size: 6rem; /* Default size */
+}
+
+.content p {
+  font-size: 1.25rem; /* Default size */
+}
+
+@media (max-width: 1200px) {
+  .content h1 {
+    font-size: 5rem; /* Adjust for smaller screens */
+  }
+
+  .content p {
+    font-size: 1rem; /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .content h1 {
+    font-size: 4rem; /* Adjust for smaller screens */
+  }
+
+  .content p {
+    font-size: 0.875rem; /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 3rem; /* Adjust for smaller screens */
+  }
+
+  .content p {
+    font-size: 0.75rem; /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .content h1 {
+    font-size: 2.5rem; /* Adjust for smaller screens */
+  }
+
+  .content p {
+    font-size: 0.625rem; /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .content h1 {
+    font-size: 2rem; /* Adjust for smaller screens */
+  }
+
+  .content p {
+    font-size: 0.5rem; /* Adjust for smaller screens */
+  }
 }
