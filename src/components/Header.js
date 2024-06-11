@@ -5,7 +5,14 @@ import { LuMenuSquare } from "react-icons/lu";
 const Header = () => {
   const [nav, setNav] = useState(false);
 
-  const handleNav = () => {};
+  const handleNav = () => {
+    setNav(!nav);
+    if (!nav) {
+      showSidebar();
+    } else {
+      hideSidebar();
+    }
+  };
 
   function showSidebar() {
     const sidebar = document.querySelector(".sidebar");
@@ -66,13 +73,6 @@ const Header = () => {
               </a>
             </li>
           </ul>
-          {/* {!nav
-            ? <LuMenuSquare className="menuButton" size="30" />
-            : <FaRegWindowClose
-                size="30"
-                className="menuButton"
-                onClick={handleNav}
-              />} */}
 
           <ul className="uppercase">
             <li className="hideOnMobile">
@@ -90,9 +90,12 @@ const Header = () => {
                 Contact Us
               </a>
             </li>
-            <li className="menuButton" onClick={showSidebar}>
+            <li
+              className="menuButton ease-in-out duration-300"
+              onClick={showSidebar}
+            >
               {!nav
-                ? <LuMenuSquare className="menuButton" size="30" />
+                ? <LuMenuSquare className="menuButton mx-2" size="30" />
                 : <FaRegWindowClose
                     size="30"
                     className="menuButton"
