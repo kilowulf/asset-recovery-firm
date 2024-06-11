@@ -13,7 +13,10 @@ const Header = () => {
     <header className="bg-maroon text-white fixed top-0 left-0 right-0 z-10 shadow-red-900">
       <div className="mx-auto flex justify-between items-center py-4">
         <h1 className="text-2xl font-bold">
-          <a href="#home" className="text-white hover:text-gray-300 pl-4">
+          <a
+            href="#home"
+            className="text-white uppercase hover:text-gray-300 pl-8"
+          >
             Asset Recovery Firm
           </a>
         </h1>
