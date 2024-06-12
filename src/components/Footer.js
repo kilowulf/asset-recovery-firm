@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPhone } from "react-icons/fa6";
+import { FaPhone } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 
@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-maroon text-white fixed bottom-0 left-0 right-0 shadow-md">
       <div className="flex items-center pt-3">
-        <ul className="footerUl">
+        <ul className="footerUl pl-5">
           <li className="flex items-center px-2">
             <FaPhone />
             <span className="px-2">(123) 456-7890</span>

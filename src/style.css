@@ -873,11 +873,15 @@ code {
 }
 
 .footerUl {
-  width: 100%;
   display: flex;
   justify-content: center;
   list-style: none;
   align-items: center;
+  flex-wrap: wrap; /* This allows the items to wrap on smaller screens */
+}
+
+.footerUl li {
+  padding: 10px;
 }
 
 nav ul {
@@ -922,6 +926,10 @@ nav li:first-child {
   justify-content: flex-start;
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease-in-out;
+}
+
+h1 {
+  color: white !important;
 }
 
 .sidebar.show {
