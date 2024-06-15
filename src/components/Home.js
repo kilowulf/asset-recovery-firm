@@ -17,8 +17,8 @@ const Home = () => {
   };
 
   return (
-    <section id="home">
-      <container className="container px-0 py-20">
+    <section id="home" className="font-sans">
+      <container className="container px-0 py-20 font-sans">
         <div className="relative overflow-hidden">
           <ReactPlayer
             url={videoUrls[currentVideoIndex]}
@@ -48,10 +48,10 @@ const Home = () => {
             <h1 className="text-center text-white text-8xl font-bold mb-5">
               Recover Overages from Foreclosed Properties
             </h1>
-            <p className="text-center text-white text-base font-bold">
+            <p className="text-center text-white text-base font-bold text-xl">
               Let our professionals take care of your property recovery
             </p>
-            <p className="text-center text-white text-base">
+            <p className="text-center text-white text-base text-xl">
               Millions of dollars are recovered yearly by homeowners who might
               have lost properties due to foreclosure proceedings
             </p>
