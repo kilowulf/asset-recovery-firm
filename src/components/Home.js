@@ -18,7 +18,7 @@ const Home = () => {
 
   return (
     <section id="home" className="font-sans">
-      <container className="container px-0 py-20 font-sans">
+      <div className="font-sans">
         <div className="relative overflow-hidden">
           <ReactPlayer
             url={videoUrls[currentVideoIndex]}
@@ -26,9 +26,8 @@ const Home = () => {
             controls={false}
             loop={false}
             muted
-            width="100vv"
+            width="100vw"
             height="100%"
-            wrapper="container"
             style={{
               filter: "brightness(0.5)",
               top: "0",
@@ -38,11 +37,8 @@ const Home = () => {
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center"
-            } // extend width to full viewport width
-            }
-            onEnded={
-              handleVideoEnd // adjust margin to center the video
-            }
+            }}
+            onEnded={handleVideoEnd}
           />
           <div className="content absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center">
             <h1 className="text-center text-white text-8xl font-bold mb-5">
@@ -57,7 +53,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-      </container>
+      </div>
     </section>
   );
 };

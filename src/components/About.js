@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section id="about" className="min-h-screen bg-gray-100 font-sans">
       <div className="container mx-auto px-4 py-20">
-        <h2 className="text-5xl font-bold text-center mb-14">
+        <h2 className="text-5xl font-bold text-center pb-6">
           About Overage Recovery
         </h2>
         <div className="flex flex-col md:flex-row items-center shadow-xl mb-10 border-2 border-gray-300 p-2 rounded-lg">
@@ -25,17 +25,15 @@ const About = () => {
               src={handshakePhoto}
               alt="Overage Recovery"
               className="rounded shadow-md"
-              style={{
-                width: "100%",
-                height: "100%",
-                maxWidth: "600px"
-              }}
+              style={{ width: "100%", height: "100%", maxWidth: "600px" }}
             />
           </div>
         </div>
         <div className="border-2 border-gray-300 p-2 rounded-lg shadow-xl hover:divide-solid">
-          <h2 className="text-5xl font-bold text-center mb-10">Our Company</h2>
-
+          <h2 className="text-5xl font-bold text-center mb-8 pt-4">
+            Our Company
+          </h2>
+          <hr class="my-12 h-0.5 border-t-3 bg-gray-700 dark:bg-white/10" />
           <br />
           <p className="text-xl leading-relaxed max-w-xl mx-auto border mb-10">
             Based in Utah, Asset Recovery Firm prides itself on a successful
