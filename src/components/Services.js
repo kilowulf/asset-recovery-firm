@@ -7,18 +7,23 @@ const Services = () => {
       id="services"
       className="min-h-screen bg-gray-300 shadow-xl font-serif"
     >
-      <div className="container mx-auto px-2 pb-20 pt-8">
-        <h2 className="text-5xl font-bold text-center pt-9 pb-6">
-          Our Services
-        </h2>
+      <div className="mx-auto px-2 pb-20 pt-8">
+        <div className="bg-maroon text-white rounded-lg py-13 mb-4 border border-gray-300 shadow-lg filter drop-shadow-md">
+          <h2 className="text-5xl font-bold text-center pt-6 pb-6">
+            Our Services
+          </h2>
+        </div>
+
         <div className="flex flex-col md:flex-row items-center border-2 border-gray-300 rounded-lg shadow-xl">
           <div className="md:w-1/2 p-2 rounded-lg max-w-xl">
-            <img
-              src={depressedGuy}
-              alt="Overage Recovery"
-              className="rounded shadow-xl w-full h-auto"
-              style={{ maxWidth: "600px", minWidth: "400px" }}
-            />
+            <div className="border-2 rounded-lg shadow-xl w-full h-auto">
+              <img
+                src={depressedGuy}
+                alt="Overage Recovery"
+                className="rounded shadow-xl w-full h-auto"
+                style={{ maxWidth: "600px", minWidth: "400px" }}
+              />
+            </div>
           </div>
           <div className="md:w-1/2 pl-8">
             <p className="text-xl leading-relaxed m-4">

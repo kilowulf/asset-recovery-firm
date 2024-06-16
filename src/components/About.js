@@ -9,7 +9,7 @@ const About = () => {
           About Overage Recovery
         </h2>
         <div className="flex flex-col md:flex-row items-center shadow-xl mb-10 border-2 border-gray-300 p-2 rounded-lg">
-          <div className="md:w-1/2 p-8">
+          <div className="p-3">
             <p className="text-xl leading-relaxed max-w-xl">
               Asset Recovery Firm specializes in recovering overage funds of
               residential properties that have fallen into foreclosure. We help
@@ -20,20 +20,20 @@ const About = () => {
               in navigating this process.
             </p>
           </div>
-          <div className="md:w-1/2 border-2 border-gray-300 p-2 rounded-lg max-w-xl shadow-xl">
-            <img
-              src={handshakePhoto}
-              alt="Overage Recovery"
-              className="rounded shadow-md"
-              style={{ width: "100%", height: "100%", maxWidth: "600px" }}
-            />
+          <div className="border-2 border-gray-300 p-2 rounded-lg max-w-xl shadow-xl">
+            <div className="m-4">
+              <img
+                src={handshakePhoto}
+                alt="Overage Recovery"
+                className="rounded shadow-md"
+                style={{ width: "100%", height: "100%", maxWidth: "600px" }}
+              />
+            </div>
           </div>
         </div>
         <div className="border-2 border-gray-300 p-2 rounded-lg shadow-xl hover:divide-solid">
-          <h2 className="text-5xl font-bold text-center mb-8 pt-4">
-            Our Company
-          </h2>
-          <hr class="my-12 h-0.5 border-t-3 bg-gray-700 dark:bg-white/10" />
+          <h2 className="text-5xl font-bold text-center pt-4">Our Company</h2>
+
           <br />
           <p className="text-xl leading-relaxed max-w-xl mx-auto border mb-10">
             Based in Utah, Asset Recovery Firm prides itself on a successful
